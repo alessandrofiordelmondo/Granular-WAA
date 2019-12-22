@@ -1,0 +1,139 @@
+body{
+    font-family: 	"Courier New", monospace;
+    font-size:		10px;
+    background-color: 	black;
+}
+#txt1{
+    color:		white;
+}
+#txt2 {
+    position:		absolute;
+    width:		300px;
+    color:		white;
+}
+/*
+.inputDiv{
+    position:		relative;
+    width:		120px;
+    height:		50px;
+    margin:		5px;
+}
+
+.fileInput{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+}
+.fileInput + label {
+    border: 		black solid 2px;
+    font-size: 		10px;
+    font-weight: 	bold;
+    color: 		black;
+    text-align: 	center;
+    background-color: 	#ffffff44;
+    display: inline-block;
+    padding:		2px;
+    margin:		3px;
+}
+
+.fileInput:focus + label,
+.fileInput + label:hover {
+    background-color: 	#00000044;
+    color:		#ccccccff;
+    cursor:		pointer;
+}
+.inputFile:focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+#faderDiv{
+    position:		relative;
+    background-color:	#aaaaaaaa;
+    width:		120px;
+    height:		70px;
+    margin:		5px;
+}
+
+#size{
+    position:		relative;
+    width:		100px;
+}
+
+#sizeValue{
+    position:		relative;
+    background-color:	#00000044;
+    color:		white;
+    width:		100px;
+    border:		 hidden;
+}
+
+#i1{
+    background-color:	#ff0000;
+}
+#i2{
+    background-color:	#ffaa00;
+}
+#i3{
+    background-color:	#aaff00;
+}
+#i4{
+    background-color:	#00ff00;
+}
+.button{
+  font-family:		"Courier New", monospace;
+  font-size: 		10pt;
+  color:		#000000ff;
+  outline:		black solid 2px;
+  background:		#00000000;
+  font-weight: 		bold;
+  border: 		none;
+  margin:		3px;
+}
+.button:hover {
+   color:		#ccccccff;
+   background: 		#00000044;	
+}
+#room {
+    position: 		absolute;
+    margin: 		auto;
+    top: 		100px;
+    right: 		0;
+    bottom: 		10px;
+    left: 		0;
+    background: 	#00aabb;
+    float:		right;
+ }
+
+.sound {
+    position:		absolute;
+    cursor:		move;
+ }
+
+#s1{
+    border:		1px solid #000000;
+    background-color:	#ff0000;
+}
+
+#s2{
+    border:		1px solid #000000;
+    background-color:	#ffaa00;
+}
+
+#s3{
+    border:		1px solid #000000;
+    background-color:	#aaff00;
+}
+
+#s4{
+    border:		1px solid #000000;
+    background-color:	#00ff00;
+}
+
+#head{
+    position:		absolute;
+    cursor:		move;
+    opacity:		1;
+
+}
+*/
