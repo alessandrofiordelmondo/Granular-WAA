@@ -4,8 +4,34 @@
 	<meta charset="UTF-8">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<script src="./js/jquery-1.11.1.min.js"></script>
-	<title> Binaural-WAA </title>
+	<script src="./js/util.js"></script>
+	<script src="./js/gran.js"></script>
+	<script src="./js/main.js"></script>
+	<title> Granular-WAA </title>
     </head>
     <body>
+	<div class="faderDiv" id="timeDiv">
+	    <p>TIME</p>
+	    <input type="range" class="fader" id="time" min="20" max="2000" value="20" onchange="
+		document.getElementById('timeValue').value=this.value;
+	    " />
+	    <input type="text" class="number" id="timeValue" value="" onchange="
+		document.getElementById('time').value=this.value;
+	    " />
+	</div>
+	<div class="faderDiv" id="timeRNDDiv">
+	    <p> RND </p>
+	    <input type="range" class="fader" id="timeRND" min="20" max="2000" value="20" onchange="
+		document.getElementById('timeRNDValue').value=this.value;
+	    " />
+	    <input type="text" class="number" id="timeRNDValue" value="" onchange="
+		document.getElementById('timeRND').value=this.value;
+	    " />
+	</div>
+	    <!--	<div>
+	    <input type="file" class="fileInput" id="openfile2"
+		onchange=" loadSound(vox, this.files);"/>
+	    <label for="openfile2"> Choose a sound </label>
+	</div>-->
     </body>
 <html>

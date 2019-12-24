@@ -11,7 +11,7 @@ body{
     width:		300px;
     color:		white;
 }
-/*
+
 .inputDiv{
     position:		relative;
     width:		120px;
@@ -47,39 +47,40 @@ body{
     outline: -webkit-focus-ring-color auto 5px;
 }
 
-#faderDiv{
-    position:		relative;
+.faderDiv{
+    position:		absolute;
     background-color:	#aaaaaaaa;
-    width:		120px;
-    height:		70px;
+    width:		25px;
+    height:		150px;
     margin:		5px;
 }
 
-#size{
+.fader{
     position:		relative;
-    width:		100px;
+    width: 		100px;
+    height: 		20px;
+    transform-origin: 	50px 50px;
+    -webkit-transform:	rotate(270deg);
+    -moz-transform:	rotate(270deg);
+    -o-transform:	rotate(270deg);
+    -ms-transform:	rotate(270deg);
+    transform:		rotate(270deg); 
 }
 
-#sizeValue{
+.number{
+    font-size:		8px;
     position:		relative;
     background-color:	#00000044;
     color:		white;
-    width:		100px;
-    border:		 hidden;
+    width:		25px;
+    border:		hidden;
+    top:		80px;
 }
 
-#i1{
-    background-color:	#ff0000;
+#timeRNDDiv{
+    left:		40px;
 }
-#i2{
-    background-color:	#ffaa00;
-}
-#i3{
-    background-color:	#aaff00;
-}
-#i4{
-    background-color:	#00ff00;
-}
+
 .button{
   font-family:		"Courier New", monospace;
   font-size: 		10pt;
@@ -94,46 +95,3 @@ body{
    color:		#ccccccff;
    background: 		#00000044;	
 }
-#room {
-    position: 		absolute;
-    margin: 		auto;
-    top: 		100px;
-    right: 		0;
-    bottom: 		10px;
-    left: 		0;
-    background: 	#00aabb;
-    float:		right;
- }
-
-.sound {
-    position:		absolute;
-    cursor:		move;
- }
-
-#s1{
-    border:		1px solid #000000;
-    background-color:	#ff0000;
-}
-
-#s2{
-    border:		1px solid #000000;
-    background-color:	#ffaa00;
-}
-
-#s3{
-    border:		1px solid #000000;
-    background-color:	#aaff00;
-}
-
-#s4{
-    border:		1px solid #000000;
-    background-color:	#00ff00;
-}
-
-#head{
-    position:		absolute;
-    cursor:		move;
-    opacity:		1;
-
-}
-*/
