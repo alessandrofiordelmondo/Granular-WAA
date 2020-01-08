@@ -56,3 +56,31 @@ var framePan = function(pn, sp){
 	return PN; 
 }
 
+//Window functions
+function wTri(N){
+	var W = new Float32Array(N);
+	for (var n = 0; n < N; 	n++){
+		W[n] = 1 - Math.abs((n - N/2) / (N/2));
+	}
+	return W
+}
+
+function wHann(N){
+	var W = new Float32Array(N);
+	for (var n = 0; n < N; n++){
+		W[n] = 0.5*(1-Math.cos((2*Math.PI*n)/N));
+	}
+	return W
+}
+
+function wBlack(N, alpha){
+	//sugested alpha = 0.16
+	var W = new Float32Array(N);
+	var a0 = (1-alpha) / 2;
+	var a1 = 0.5;
+	var a2 = alpha / 2;
+	for (var n = 0; n < N; n++){
+		W[n] = a0 - a1*Math.cos((2*Math.PI*n)/N) + a2*Math.cos((4*Math.PI*n)/N);
+	}
+	return W
+}

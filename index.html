@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<script src="./js/jquery-1.11.1.min.js"></script>
+	<script src="./js/plot.js"></script>
 	<script src="./js/util.js"></script>
 	<script src="./js/gran.js"></script>
 	<script src="./js/main.js"></script>
@@ -21,17 +22,116 @@
 	</div>
 	<div class="faderDiv" id="timeRNDDiv">
 	    <p> RND </p>
-	    <input type="range" class="fader" id="timeRND" min="20" max="2000" value="20" onchange="
+	    <input type="range" class="fader" id="timeRND" min="0" max="100" value="0" onchange="
 		document.getElementById('timeRNDValue').value=this.value;
 	    " />
 	    <input type="text" class="number" id="timeRNDValue" value="" onchange="
 		document.getElementById('timeRND').value=this.value;
 	    " />
 	</div>
-	    <!--	<div>
+	<div class="faderDiv" id="pitchDiv">
+	    <p> ptch </p>
+	    <input type="range" class="fader" id="pitch" min="0.25" max="2" step="0.001" value="1" onchange="
+		document.getElementById('pitchValue').value=this.value;
+	    " />
+	    <input type="text" class="number" id="pitchValue" value="" onchange=" 
+		document.getElementById('pitch').value=this.value;
+	    " />
+	</div>
+	<div class="faderDiv" id="pitchRNDDiv">
+	    <p> RND </p>
+	    <input type="range" class="fader" id="pitchRND" min="0" max="100" value="0" onchange="
+		document.getElementById('pitchRNDValue').value=this.value;
+	    " />
+	    <input type="text" class="number" id="pitchRNDValue" value="" onchange=" 
+		document.getElementById('pitchRND').value=this.value;
+	    " />
+	</div>
+	<div class="faderDiv" id="dencityDiv">
+	    <p> dncty </p>
+	    <input type="range" class="fader" id="dencity" min="0" max="100" value="0" onchange="
+		document.getElementById('dencityValue').value=this.value;
+	    " />
+	    <input type="text" class="number" id="dencityValue" value="" onchange=" 
+		document.getElementById('dencity').value=this.value;
+	    " />
+	</div>
+	<div class="faderDiv" id="panDiv">
+	    <p> pan </p>
+	    <input type="range" class="fader" id="pan" min="-1" max="1" step="0.001" value="0" onchange="
+		document.getElementById('panValue').value=this.value;
+	    " />
+	    <input type="text" class="number" id="panValue" value="" onchange=" 
+		document.getElementById('pan').value=this.value;
+	    " />
+	</div>
+	<div class="faderDiv" id="spreadDiv">
+	    <p> sprd </p>
+	    <input type="range" class="fader" id="spread" min="0" max="100" value="0" onchange="
+		document.getElementById('spreadValue').value=this.value;
+	    " />
+	    <input type="text" class="number" id="spreadValue" value="" onchange=" 
+		document.getElementById('spread').value=this.value;
+	    " />
+	</div>
+	<div class="fader2Div" id="valocityDiv">
+	    <input type="range" class="fader2" id="velocity" min="0" max="4" step="0.001" value="0" onchange="
+		document.getElementById('velocityValue').value=this.value;
+	    " />
+	    <input type="text" class="number2" id="velocityValue" value="" onchange=" 
+		document.getElementById('velocity').value=this.value;
+	    " />
+	    <p style="margin: 0px;">velocity</p>
+	</div>
+	<div class="fader2Div" id="cueDiv">
+	    <input type="range" class="fader2" id="cue" min="0" max="1" step="0.001" value="0" onchange="
+		document.getElementById('cueValue').value=this.value;
+	    " />
+	    <input type="text" class="number2" id="cueValue" value="" onchange=" 
+		document.getElementById('cue').value=this.value;
+	    " />
+	    <p style="margin: 0px;">cue</p>
+	</div>
+	<!-- CHOOSE WINDOW FUNCTION BUTTON -->
+	<div class="wTypeDiv"> 
+   	<div class="wTypeButton"> Window Type </div>            
+      	    <ul id="windowList">
+     		<li class="wL"><a class="active" onclick="windType('tri')">Triangular</a></li>
+     		<li class="wL"><a onclick="windType('han')">Hanning</a></li>
+     		<li class="wL"><a onclick="windType('bla')">Blackman</a></li>
+      	    </ul> 
+   	</div> 	
+	<div class="inputDiv">
 	    <input type="file" class="fileInput" id="openfile2"
 		onchange=" loadSound(vox, this.files);"/>
 	    <label for="openfile2"> Choose a sound </label>
-	</div>-->
+	</div>
+	<canvas id="plot" ></canvas>
+	<script>
+	    $(document).ready(function() {
+    		// on c.wLck on  setting wTypeButton
+    		$(".wTypeButton").click(function() {
+       		    var val = $(this).attr('id');
+        	    if (val == 1) {
+            		$("#windowList").hide();
+           	 	$(this).attr('id', '0');
+        	    } else {
+           		$("#windowList").show();
+            		$(this).attr('id', '1');
+        	    }
+		});
+
+    		//Mouse c.wLck on setting wTypeButton and #windowList .wLst
+    		$("#windowList, .wTypeButton").mouseup(function() {
+        	    return false;
+    		});
+
+    		//Document C.wLck
+    		$(document).mouseup(function() {
+        	    $("#windowList").hide();
+        	    $(".wTypeButton").attr('id', '0');
+    		});
+	    });
+	</script>
     </body>
 <html>

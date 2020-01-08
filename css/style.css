@@ -1,7 +1,7 @@
 body{
     font-family: 	"Courier New", monospace;
     font-size:		10px;
-    background-color: 	black;
+    background-color: 	white;
 }
 #txt1{
     color:		white;
@@ -13,10 +13,12 @@ body{
 }
 
 .inputDiv{
-    position:		relative;
+    position:		absolute;
     width:		120px;
     height:		50px;
     margin:		5px;
+    top:		280px;
+    left:		0px;
 }
 
 .fileInput{
@@ -25,21 +27,20 @@ body{
     opacity: 0;
 }
 .fileInput + label {
-    border: 		black solid 2px;
+    border: 		#aaaaaaff solid 2px;
     font-size: 		10px;
     font-weight: 	bold;
     color: 		black;
     text-align: 	center;
-    background-color: 	#ffffff44;
-    display: inline-block;
+    background-color: 	#aaaaaaff;
+    display: 		inline-block;
     padding:		2px;
     margin:		3px;
 }
 
 .fileInput:focus + label,
 .fileInput + label:hover {
-    background-color: 	#00000044;
-    color:		#ccccccff;
+    background-color: 	#ffffffff;
     cursor:		pointer;
 }
 .inputFile:focus + label {
@@ -51,7 +52,15 @@ body{
     position:		absolute;
     background-color:	#aaaaaaaa;
     width:		25px;
-    height:		150px;
+    height:		180px;
+    margin:		5px;
+}
+
+.fader2Div{
+    position:		absolute;
+    background-color:	#aaaaaaaa;
+    width:		150px;
+    height:		35px;
     margin:		5px;
 }
 
@@ -67,6 +76,14 @@ body{
     transform:		rotate(270deg); 
 }
 
+.fader2{
+    position:		relative;
+    width: 		100px;
+    height: 		10px;
+    margin:		1px;
+    padding:		3px;
+}
+
 .number{
     font-size:		8px;
     position:		relative;
@@ -77,10 +94,48 @@ body{
     top:		80px;
 }
 
+.number2{
+    font-size:		8px;
+    position:		relative;
+    background-color:	#00000044;
+    color:		white;
+    width:		25px;
+    border:		hidden;
+}
+
 #timeRNDDiv{
     left:		40px;
 }
 
+#pitchDiv{
+    left:		80px;
+}
+
+#pitchRNDDiv{
+    left:		110px;
+}
+
+#dencityDiv{
+    left:		150px;
+}
+
+#panDiv{
+    left:		190px;
+}
+
+#spreadDiv{
+    left:		220px;
+}
+
+#valocityDiv{
+    top:		200px;
+}
+
+#cueDiv{
+    top:		240px;
+}
+/*
+.button{
 .button{
   font-family:		"Courier New", monospace;
   font-size: 		10pt;
@@ -94,4 +149,50 @@ body{
 .button:hover {
    color:		#ccccccff;
    background: 		#00000044;	
+}
+*/
+.wTypeDiv {
+    position: 		absolute;
+    display: 		inline-block;
+    background-color:	#aaaaaaaa; 
+    top:		205px;
+    left:		170px;
+}
+#windowList {
+    position: 		absolute;
+    list-style-type: 	none;
+    margin: 		0;
+    padding: 		0;
+    width: 		80px;
+    background-color:	#aaaaaaff; 
+    display: 		none;
+    z-index: 		1;
+}
+.wL a {
+    color: 		black;
+    text-decoration: 	none;
+}
+.wL {
+    border-bottom: 	1px solid #e5e5e5;
+}
+.wL:last-child {
+    border-bottom: 	none;
+}
+.wL:hover {
+    background-color: 	#e5e5e5;
+    color: 		white;
+}
+
+.wTypeButton{
+    width:		78px;
+    height:		10px;
+    padding:		2px;
+    background-color:	#777777ff;
+    color:		white;
+}
+
+#plot{
+    position:		absolute;
+    top:		230px;
+    left:		170px;
 }
