@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<script src="./js/jquery-1.11.1.min.js"></script>
-	<script src="./js/plot.js"></script>
 	<script src="./js/util.js"></script>
 	<script src="./js/gran.js"></script>
 	<script src="./js/main.js"></script>
@@ -13,82 +12,100 @@
     <body>
 	<div class="faderDiv" id="timeDiv">
 	    <p>TIME</p>
-	    <input type="range" class="fader" id="time" min="20" max="2000" value="20" onchange="
+	    <input type="range" class="fader" id="time" min="20" max="2000" onchange="
 		document.getElementById('timeValue').value=this.value;
+		time = parseFloat(this.value);
 	    " />
-	    <input type="text" class="number" id="timeValue" value="" onchange="
+	    <input type="text" class="number" id="timeValue"  onchange="
 		document.getElementById('time').value=this.value;
+		time = parseFloat(this.value);
 	    " />
 	</div>
 	<div class="faderDiv" id="timeRNDDiv">
 	    <p> RND </p>
-	    <input type="range" class="fader" id="timeRND" min="0" max="100" value="0" onchange="
+	    <input type="range" class="fader" id="timeRND" min="0" max="100" onchange="
 		document.getElementById('timeRNDValue').value=this.value;
+		timeRND = parseFloat(this.value);
 	    " />
-	    <input type="text" class="number" id="timeRNDValue" value="" onchange="
+	    <input type="text" class="number" id="timeRNDValue" onchange="
 		document.getElementById('timeRND').value=this.value;
+		timeRND = parseFloat(this.value);
 	    " />
 	</div>
 	<div class="faderDiv" id="pitchDiv">
 	    <p> ptch </p>
-	    <input type="range" class="fader" id="pitch" min="0.25" max="2" step="0.001" value="1" onchange="
+	    <input type="range" class="fader" id="pitch" min="0.25" max="2" step="0.001" onchange="
 		document.getElementById('pitchValue').value=this.value;
+		pitch = parseFloat(this.value);
 	    " />
-	    <input type="text" class="number" id="pitchValue" value="" onchange=" 
+	    <input type="text" class="number" id="pitchValue" onchange=" 
 		document.getElementById('pitch').value=this.value;
+		pitch = parseFloat(this.value);
 	    " />
 	</div>
 	<div class="faderDiv" id="pitchRNDDiv">
 	    <p> RND </p>
-	    <input type="range" class="fader" id="pitchRND" min="0" max="100" value="0" onchange="
+	    <input type="range" class="fader" id="pitchRND" min="0" max="100" onchange="
 		document.getElementById('pitchRNDValue').value=this.value;
+		pitchRND = parseFloat(this.value);
 	    " />
-	    <input type="text" class="number" id="pitchRNDValue" value="" onchange=" 
+	    <input type="text" class="number" id="pitchRNDValue" onchange=" 
 		document.getElementById('pitchRND').value=this.value;
+		pitchRND = parseFloat(this.value);
 	    " />
 	</div>
 	<div class="faderDiv" id="dencityDiv">
 	    <p> dncty </p>
-	    <input type="range" class="fader" id="dencity" min="0" max="100" value="0" onchange="
+	    <input type="range" class="fader" id="dencity" min="0" max="100" onchange="
 		document.getElementById('dencityValue').value=this.value;
+		dencity = parseFloat(this.value);
 	    " />
-	    <input type="text" class="number" id="dencityValue" value="" onchange=" 
+	    <input type="text" class="number" id="dencityValue" onchange=" 
 		document.getElementById('dencity').value=this.value;
+		dencity = parseFloat(this.value);
 	    " />
 	</div>
 	<div class="faderDiv" id="panDiv">
 	    <p> pan </p>
-	    <input type="range" class="fader" id="pan" min="-1" max="1" step="0.001" value="0" onchange="
+	    <input type="range" class="fader" id="pan" min="-1" max="1" step="0.001" onchange="
 		document.getElementById('panValue').value=this.value;
+		pan = parseFloat(this.value);
 	    " />
-	    <input type="text" class="number" id="panValue" value="" onchange=" 
+	    <input type="text" class="number" id="panValue" onchange=" 
 		document.getElementById('pan').value=this.value;
+		pan = parseFloat(this.value);
 	    " />
 	</div>
 	<div class="faderDiv" id="spreadDiv">
 	    <p> sprd </p>
-	    <input type="range" class="fader" id="spread" min="0" max="100" value="0" onchange="
+	    <input type="range" class="fader" id="spread" min="0" max="100" onchange="
 		document.getElementById('spreadValue').value=this.value;
+		spread = parseFloat(this.value);
 	    " />
-	    <input type="text" class="number" id="spreadValue" value="" onchange=" 
+	    <input type="text" class="number" id="spreadValue" onchange=" 
 		document.getElementById('spread').value=this.value;
+		spread = parseFloat(this.value);
 	    " />
 	</div>
 	<div class="fader2Div" id="valocityDiv">
-	    <input type="range" class="fader2" id="velocity" min="0" max="4" step="0.001" value="0" onchange="
+	    <input type="range" class="fader2" id="velocity" min="0" max="4" step="0.001" onchange="
 		document.getElementById('velocityValue').value=this.value;
+		velocity = parseFloat(this.value);
 	    " />
-	    <input type="text" class="number2" id="velocityValue" value="" onchange=" 
+	    <input type="text" class="number2" id="velocityValue" onchange=" 
 		document.getElementById('velocity').value=this.value;
+		velocity = parseFloat(this.value);
 	    " />
 	    <p style="margin: 0px;">velocity</p>
 	</div>
 	<div class="fader2Div" id="cueDiv">
-	    <input type="range" class="fader2" id="cue" min="0" max="1" step="0.001" value="0" onchange="
+	    <input type="range" class="fader2" id="cue" min="0" max="1" step="0.001" onchange="
 		document.getElementById('cueValue').value=this.value;
+		cue = parseFloat(this.value);
 	    " />
-	    <input type="text" class="number2" id="cueValue" value="" onchange=" 
+	    <input type="text" class="number2" id="cueValue" onchange=" 
 		document.getElementById('cue').value=this.value;
+		cue = parseFloat(this.value);
 	    " />
 	    <p style="margin: 0px;">cue</p>
 	</div>
@@ -102,36 +119,14 @@
       	    </ul> 
    	</div> 	
 	<div class="inputDiv">
-	    <input type="file" class="fileInput" id="openfile2"
-		onchange=" loadSound(vox, this.files);"/>
+	    <input type="file" class="fileInput" id="openfile2" onchange=" 
+		start();
+		loadSound(vox, this.files);
+	    "/>
 	    <label for="openfile2"> Choose a sound </label>
 	</div>
 	<canvas id="plot" ></canvas>
-	<script>
-	    $(document).ready(function() {
-    		// on c.wLck on  setting wTypeButton
-    		$(".wTypeButton").click(function() {
-       		    var val = $(this).attr('id');
-        	    if (val == 1) {
-            		$("#windowList").hide();
-           	 	$(this).attr('id', '0');
-        	    } else {
-           		$("#windowList").show();
-            		$(this).attr('id', '1');
-        	    }
-		});
-
-    		//Mouse c.wLck on setting wTypeButton and #windowList .wLst
-    		$("#windowList, .wTypeButton").mouseup(function() {
-        	    return false;
-    		});
-
-    		//Document C.wLck
-    		$(document).mouseup(function() {
-        	    $("#windowList").hide();
-        	    $(".wTypeButton").attr('id', '0');
-    		});
-	    });
-	</script>
+	<button type="button" class="playState" id="play" onclick="play()">PLAY</button>
+	<button type="button" class="playState" id="stop" onclick="stop()">STOP</button>
     </body>
 <html>

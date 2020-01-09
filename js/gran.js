@@ -1,6 +1,6 @@
 var Gran = function(audioContext){
     var self = this;
-    self.state = true;
+    self.state = false;
     self.audioContext = audioContext;
     self.currentTime = self.audioContext.currentTime;
     self.buffer = undefined;
@@ -21,11 +21,11 @@ var Gran = function(audioContext){
     */
 
     self.play = function(){
-	var sound = self.audioContextBufferSource();
+	var sound = self.audioContext.createBufferSource();
 	sound.buffer = self.buffer;
 	var bufDur = sound.buffer.duration;
 	var startPoint = cue * bufDur;
-	var cuePoint = ( (self.currentTime - timeOffSet) * valocity + startPoint ) % bufDur;
+	var cuePoint = ( (audioContext.currentTime - timeOffSet) * velocity + startPoint ) % bufDur;
         var fTime = frameTime(time, timeRND);
 	var fPitch = framePitch(pitch, pitchRND);
 	var fpT = fTime/Math.abs(fPitch);
@@ -43,8 +43,8 @@ var Gran = function(audioContext){
 			
 	sound.playbackRate.value = fPitch;
 	sound.start(self.currentTime, fCue);
-	self.gain.gain.setValueCurveAtTime (w, self.currentTime, fpT);
-	sound.stop(self.currentTime + fpT);
+	self.gain.gain.setValueCurveAtTime (w, audioContext.currentTime, fpT);
+	sound.stop(audioContext.currentTime + fpT + 0.01);
 		
 	sound.onended = function(){
 	    if (self.state){

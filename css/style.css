@@ -43,9 +43,34 @@ body{
     background-color: 	#ffffffff;
     cursor:		pointer;
 }
-.inputFile:focus + label {
-    outline: 1px dotted #000;
-    outline: -webkit-focus-ring-color auto 5px;
+
+.playState{
+    position:		absolute;
+    background-color: 	#aaaaaaff;
+    border: 		#aaaaaaff solid 2px;
+    color: 		black;
+    font-size: 		10px;
+    font-weight: 	bold;
+    text-align: 	center;
+    text-decoration: 	none;
+    display: 		inline-block;
+    padding:		2px;
+    margin:		3px;
+}
+
+#play{
+    top:		284px;
+    left:		212px;
+}
+
+#stop{
+    top:		284px;
+    left:		170px;
+}
+
+.playState:hover {
+    background-color: 	#ffffffff;
+    cursor:		pointer;
 }
 
 .faderDiv{
